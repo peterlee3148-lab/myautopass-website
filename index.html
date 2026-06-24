@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,266 +6,347 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MyAutoPass - Australia's Digital Vehicle Passport</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 body{
-    background:#ffffff;
-    color:#111827;
+background:#fff;
+color:#0f172a;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+max-width:1200px;
+margin:auto;
+padding:0 24px;
 }
+
+/* NAV */
 
 nav{
-    position:absolute;
-    top:0;
-    width:100%;
-    z-index:100;
+position:absolute;
+width:100%;
+z-index:10;
 }
 
-.nav-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 0;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:24px 0;
 }
 
 .logo{
-    color:white;
-    font-size:32px;
-    font-weight:700;
+font-size:38px;
+font-weight:800;
+color:white;
 }
 
 .logo span{
-    color:#2563eb;
+color:#2563eb;
 }
 
 .nav-links{
-    display:flex;
-    gap:30px;
+display:flex;
+gap:36px;
 }
 
 .nav-links a{
-    color:white;
-    text-decoration:none;
+color:white;
+text-decoration:none;
+font-weight:500;
 }
 
-.btn{
-    background:#2563eb;
-    color:white;
-    padding:14px 24px;
-    border-radius:10px;
-    text-decoration:none;
-    display:inline-block;
+.nav-btn{
+background:#2563eb;
+color:white;
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
 }
+
+/* HERO */
 
 .hero{
-    min-height:100vh;
-    background:
-    linear-gradient(rgba(3,7,18,.8),rgba(3,7,18,.8)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    display:flex;
-    align-items:center;
+min-height:100vh;
+background:
+linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.85)),
+url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1800');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
 }
 
-.hero-content{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
 .hero h1{
-    font-size:72px;
-    line-height:1.1;
-    margin-bottom:20px;
+font-size:76px;
+line-height:1;
+font-weight:800;
+margin-bottom:24px;
 }
 
-.highlight{
-    color:#3b82f6;
+.hero-blue{
+color:#2563eb;
 }
 
 .hero p{
-    font-size:22px;
-    line-height:1.7;
-    margin-bottom:30px;
-    opacity:.9;
+font-size:22px;
+line-height:1.8;
+max-width:600px;
+opacity:.95;
+margin-bottom:30px;
 }
 
 .hero-buttons{
-    display:flex;
-    gap:15px;
+display:flex;
+gap:16px;
+}
+
+.primary-btn{
+background:#2563eb;
+color:white;
+padding:16px 32px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
 }
 
 .secondary-btn{
-    border:1px solid white;
-    color:white;
-    padding:14px 24px;
-    border-radius:10px;
-    text-decoration:none;
+border:1px solid rgba(255,255,255,.3);
+padding:16px 32px;
+border-radius:12px;
+text-decoration:none;
+color:white;
 }
 
 .phone-card{
-    background:white;
-    border-radius:30px;
-    padding:25px;
-    color:#111827;
-    box-shadow:0 25px 60px rgba(0,0,0,.4);
+background:white;
+border-radius:34px;
+padding:22px;
+color:#111;
+box-shadow:0 30px 80px rgba(0,0,0,.4);
 }
 
 .phone-card img{
-    width:100%;
-    border-radius:15px;
+width:100%;
+border-radius:20px;
 }
 
 .score{
-    margin-top:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:18px;
 }
 
 .score-number{
-    font-size:48px;
-    color:#16a34a;
-    font-weight:bold;
+font-size:48px;
+font-weight:800;
+color:#16a34a;
 }
 
+/* SECTION TITLES */
+
 .section{
-    padding:100px 0;
+padding:90px 0;
 }
 
 .section-title{
-    text-align:center;
-    font-size:48px;
-    margin-bottom:60px;
+text-align:center;
+font-size:48px;
+font-weight:800;
+margin-bottom:60px;
 }
 
+/* FEATURES */
+
 .features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
 }
 
 .feature{
-    text-align:center;
-    padding:30px;
+text-align:center;
+padding:30px;
 }
 
 .feature h3{
-    margin:20px 0;
+margin-bottom:15px;
 }
 
+/* SOLUTION */
+
 .solution{
-    background:#f8fafc;
+background:#f8fafc;
 }
 
 .solution-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+display:grid;
+grid-template-columns:420px 1fr;
+gap:40px;
 }
 
-.solution-card{
-    background:white;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+.solution-left{
+padding:20px;
+}
+
+.solution-left h2{
+font-size:54px;
+line-height:1.1;
+margin-bottom:30px;
 }
 
 .check{
-    color:#16a34a;
-    margin-right:10px;
+color:#16a34a;
+font-weight:bold;
+margin-right:10px;
 }
 
+.solution-left p{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.dashboard{
+background:white;
+border-radius:24px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.stat{
+border:1px solid #e5e7eb;
+padding:20px;
+border-radius:12px;
+}
+
+.stat-number{
+font-size:36px;
+font-weight:800;
+color:#2563eb;
+}
+
+/* BENEFITS */
+
 .benefits{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
 .benefit{
-    padding:30px;
-    border-radius:16px;
+padding:30px;
+border-radius:20px;
 }
 
 .green{
-    background:#f0fdf4;
+background:#ecfdf5;
 }
 
 .blue{
-    background:#eff6ff;
+background:#eff6ff;
 }
 
 .purple{
-    background:#faf5ff;
+background:#faf5ff;
 }
 
+/* WAITLIST */
+
 .waitlist{
-    background:#020617;
-    color:white;
+background:#020617;
+color:white;
 }
 
 .waitlist-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.waitlist h2{
+font-size:52px;
+margin-bottom:20px;
 }
 
 form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
 input,select{
-    padding:16px;
-    border-radius:10px;
-    border:none;
+padding:18px;
+border-radius:12px;
+border:none;
+font-size:16px;
 }
 
-footer{
-    background:#020617;
-    color:white;
-    text-align:center;
-    padding:40px;
-    border-top:1px solid #1e293b;
+button{
+padding:18px;
+background:#2563eb;
+border:none;
+color:white;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
 }
+
+/* FOOTER */
+
+footer{
+background:#020617;
+color:white;
+padding:40px;
+text-align:center;
+border-top:1px solid #1e293b;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
 
-.hero-content,
+.hero-grid,
 .solution-grid,
 .waitlist-grid{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 }
 
 .features,
 .benefits{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 }
 
 .hero h1{
-    font-size:48px;
+font-size:52px;
 }
 
 .nav-links{
-    display:none;
+display:none;
 }
 
 }
@@ -275,7 +357,7 @@ footer{
 <body>
 
 <nav>
-<div class="container nav-content">
+<div class="container navbar">
 
 <div class="logo">
 My<span>AutoPass</span>
@@ -289,29 +371,30 @@ My<span>AutoPass</span>
 <a href="#">FAQ</a>
 </div>
 
-<a href="#waitlist" class="btn">Join Waitlist</a>
+<a href="#" class="nav-btn">Join Waitlist</a>
 
 </div>
 </nav>
 
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container hero-grid">
 
 <div>
 
 <h1>
 Every Car Has A Story.<br>
-<span class="highlight">Keep Yours Verified.</span>
+<span class="hero-blue">Keep Yours Verified.</span>
 </h1>
 
 <p>
-Australia's digital vehicle passport.
-Store service history, repairs, inspections and warranties in one trusted place.
+Australia's digital vehicle passport. Store service history,
+repairs, inspections and warranties in one secure place.
+Verified by workshops. Owned by drivers.
 </p>
 
 <div class="hero-buttons">
-<a href="#waitlist" class="btn">Join Waitlist</a>
+<a href="#" class="primary-btn">Join Waitlist</a>
 <a href="#" class="secondary-btn">For Mechanics</a>
 </div>
 
@@ -321,17 +404,17 @@ Store service history, repairs, inspections and warranties in one trusted place.
 
 <div class="phone-card">
 
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200" alt="BMW">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
 
 <div class="score">
+
 <div>
 <h3>Vehicle Score</h3>
 <p>Verified History</p>
 </div>
 
-<div class="score-number">
-94%
-</div>
+<div class="score-number">94%</div>
+
 </div>
 
 </div>
@@ -347,7 +430,7 @@ Store service history, repairs, inspections and warranties in one trusted place.
 <div class="container">
 
 <h2 class="section-title">
-Buying a Used Car Shouldn't Be Guesswork
+Buying A Used Car Shouldn't Be Guesswork
 </h2>
 
 <div class="features">
@@ -359,7 +442,7 @@ Buying a Used Car Shouldn't Be Guesswork
 
 <div class="feature">
 <h3>Locked Data</h3>
-<p>Records stay inaccessible.</p>
+<p>Dealer records stay inaccessible.</p>
 </div>
 
 <div class="feature">
@@ -382,83 +465,48 @@ Buying a Used Car Shouldn't Be Guesswork
 
 <div class="container solution-grid">
 
-<div>
+<div class="solution-left">
 
-<h2 style="font-size:48px;margin-bottom:30px;">
+<h2>
 One Passport For The Life Of Your Vehicle
 </h2>
 
-<p style="margin-bottom:20px;">
-<span class="check">✓</span>Upload service invoices
-</p>
-
-<p style="margin-bottom:20px;">
-<span class="check">✓</span>Store maintenance records
-</p>
-
-<p style="margin-bottom:20px;">
-<span class="check">✓</span>Verify work with workshops
-</p>
-
-<p style="margin-bottom:20px;">
-<span class="check">✓</span>Track odometer history
-</p>
-
-<p>
-<span class="check">✓</span>Share trusted history with buyers
-</p>
+<p><span class="check">✓</span>Upload service invoices</p>
+<p><span class="check">✓</span>Store maintenance records</p>
+<p><span class="check">✓</span>Verify workshop history</p>
+<p><span class="check">✓</span>Track odometer readings</p>
+<p><span class="check">✓</span>Share trusted history with buyers</p>
 
 </div>
 
-<div class="solution-card">
+<div class="dashboard">
 
 <h3>2021 BMW 330i M Sport</h3>
 
-<br>
+<div class="stats">
 
-<p>Vehicle Score: <strong>94%</strong></p>
-<p>Verified Services: <strong>28</strong></p>
-<p>Documents Stored: <strong>15</strong></p>
-<p>Owners: <strong>2</strong></p>
+<div class="stat">
+<div class="stat-number">94%</div>
+Vehicle Score
+</div>
 
+<div class="stat">
+<div class="stat-number">28</div>
+Services
+</div>
+
+<div class="stat">
+<div class="stat-number">15</div>
+Documents
+</div>
+
+<div class="stat">
+<div class="stat-number">2</div>
+Owners
 </div>
 
 </div>
 
-</section>
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">
-Built For Everyone
-</h2>
-
-<div class="benefits">
-
-<div class="benefit green">
-<h3>Vehicle Owners</h3>
-<br>
-<p>✓ Never lose records</p>
-<p>✓ Easier resale value</p>
-<p>✓ Secure storage</p>
-</div>
-
-<div class="benefit blue">
-<h3>Mechanics</h3>
-<br>
-<p>✓ Verify work</p>
-<p>✓ Build trust</p>
-<p>✓ Reduce paperwork</p>
-</div>
-
-<div class="benefit purple">
-<h3>Dealers & Buyers</h3>
-<br>
-<p>✓ View verified history</p>
-<p>✓ Spot odometer issues</p>
-<p>✓ Buy with confidence</p>
 </div>
 
 </div>
@@ -466,52 +514,6 @@ Built For Everyone
 </div>
 
 </section>
-
-<section class="section waitlist" id="waitlist">
-
-<div class="container waitlist-grid">
-
-<div>
-
-<h2 style="font-size:48px;margin-bottom:20px;">
-Be First To Access MyAutoPass
-</h2>
-
-<p>
-Join the waitlist and help shape Australia's digital vehicle passport.
-</p>
-
-</div>
-
-<div>
-
-<form>
-
-<input type="text" placeholder="Full Name">
-
-<input type="email" placeholder="Email Address">
-
-<select>
-<option>I am a Vehicle Owner</option>
-<option>I am a Mechanic</option>
-<option>I am a Dealer</option>
-</select>
-
-<button class="btn" style="border:none;">
-Join Waitlist
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 MyAutoPass. All Rights Reserved.
-</footer>
 
 </body>
 </html>
